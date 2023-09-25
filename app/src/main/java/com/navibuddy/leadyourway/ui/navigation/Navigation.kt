@@ -1,11 +1,9 @@
 package com.navibuddy.leadyourway.ui.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import com.navibuddy.leadyourway.ui.auth.activities.Login
 import com.navibuddy.leadyourway.ui.auth.activities.Register
 
@@ -16,7 +14,7 @@ sealed class Routes(val route: String) {
 
 @Composable
 fun Navigation() {
-  val navController = rememberNavController();
+  val navController = rememberNavController()
 
   NavHost(
     navController = navController,
@@ -30,6 +28,5 @@ fun Navigation() {
     composable(Routes.Register.route) {
       Register(navController)
     }
-
   }
 }

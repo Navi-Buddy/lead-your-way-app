@@ -51,7 +51,12 @@ dependencies {
 
   // START - CUSTOM DEPENDENCIES
 
-  val navVersion = "2.7.2"
+  // MORE ICONS
+  val materialIconsVersion = "1.5.1"
+  implementation("androidx.compose.material:material-icons-extended:$materialIconsVersion")
+
+  // NAVIGATION
+  val navVersion = "2.7.3"
   implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
   implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
   implementation("androidx.navigation:navigation-compose:$navVersion")

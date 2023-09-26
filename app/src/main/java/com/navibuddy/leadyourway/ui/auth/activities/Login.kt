@@ -1,6 +1,8 @@
 package com.navibuddy.leadyourway.ui.auth.activities
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,11 +13,14 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.navibuddy.leadyourway.R
 import com.navibuddy.leadyourway.ui.auth.components.EmailTextField
 import com.navibuddy.leadyourway.ui.auth.components.PasswordTextField
 import com.navibuddy.leadyourway.ui.navigation.Routes
@@ -30,17 +35,26 @@ fun Login(navController: NavController) {
     verticalArrangement = Arrangement.SpaceAround,
     modifier = Modifier.padding(32.dp)
   ) {
+    Column {
+      Box(
+        modifier = Modifier.fillMaxWidth(),
+        contentAlignment = Alignment.Center
+      ) {
+        Image(
+          painter = painterResource(id = R.drawable.transparent_icon),
+          contentDescription = null,
+          modifier = Modifier
+        )
+      }
+    }
 
     Column {
-      // TODO: Add Lead Your Way logo
       Text(
+        modifier = Modifier.padding(vertical = 15.dp),
         text = "Welcome back!",
         fontSize = 32.sp,
         fontWeight = FontWeight.Bold
       )
-    }
-
-    Column {
       EmailTextField(email = email, setEmail = setEmail)
       Spacer(Modifier.padding(8.dp))
       PasswordTextField(

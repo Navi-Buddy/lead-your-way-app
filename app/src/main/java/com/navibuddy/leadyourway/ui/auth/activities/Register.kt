@@ -94,7 +94,7 @@ fun Register(navController: NavController) {
                 )
             }
             Spacer(modifier = Modifier.padding(4.dp))
-            TextButton(onClick = { navController.navigate(Routes.Register.route) }) {
+            TextButton(onClick = { navController.navigate(Routes.Login.route) }) {
                 Text("Already signed up? ")
                 Text(text = "Login", fontWeight = FontWeight.ExtraBold)
             }

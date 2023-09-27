@@ -67,7 +67,7 @@ fun Login(navController: NavController) {
     
     Column {
       FilledIconButton(
-        onClick = { /*TODO*/ },
+        onClick = { navController.navigate(Routes.Home.route) },
         modifier = Modifier.fillMaxWidth()
       ) {
         Text(

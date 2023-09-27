@@ -34,6 +34,7 @@ fun RepeatedPasswordTextField(
         leadingIcon = { Icon(Icons.Filled.Lock, "Lock") },
         label = { Text(text = "Confirm password") },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        singleLine = true,
         visualTransformation =
         if (showRepeatedPassword) VisualTransformation.None else PasswordVisualTransformation(),
         trailingIcon = {

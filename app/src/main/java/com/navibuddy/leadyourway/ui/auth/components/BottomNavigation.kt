@@ -19,40 +19,50 @@ import androidx.compose.ui.unit.dp
 
 @Preview
 @Composable
-fun BottomNavigation() {
+fun BottomNavigation(inSearch: Boolean, setInSearch: (Boolean) -> Unit) {
 
     BottomAppBar{
         Spacer(modifier = Modifier.weight(1f))
         FloatingActionButton(
-            onClick = { },
+            onClick = {
+                setInSearch(true)
+            },
             elevation = FloatingActionButtonDefaults.elevation(0.dp)
         ) {
             Icon(Icons.Filled.Search, "Search Section")
         }
         Spacer(modifier = Modifier.padding(8.dp))
         FloatingActionButton(
-            onClick = { },
+            onClick = {
+                setInSearch(false)
+            },
             elevation = FloatingActionButtonDefaults.elevation(0.dp)
         ) {
             Icon(Icons.Filled.Favorite, "Favorite bikes")
         }
         Spacer(modifier = Modifier.padding(8.dp))
         FloatingActionButton(
-            onClick = { },
+            onClick = {
+                setInSearch(false)
+            },
             elevation = FloatingActionButtonDefaults.elevation(0.dp)
         ) {
             Icon(Icons.Filled.DirectionsBike, "Rented bikes")
         }
         Spacer(modifier = Modifier.padding(8.dp))
         FloatingActionButton(
-            onClick = { },
+            onClick = {
+                setInSearch(false)
+            },
             elevation = FloatingActionButtonDefaults.elevation(0.dp)
         ) {
             Icon(Icons.Filled.InsertComment, "Inbox of messages")
         }
         Spacer(modifier = Modifier.padding(8.dp))
         FloatingActionButton(
-            onClick = { },
+            onClick = {
+                setInSearch(false)
+            },
             elevation = FloatingActionButtonDefaults.elevation(0.dp)
         ) {
             Icon(Icons.Filled.AccountCircle, "Profile")
